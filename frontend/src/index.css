@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-dark-800: #1f2937;
+  --color-dark-900: #111827;
+  --color-accent: #8b5cf6;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-100 antialiased selection:bg-accent selection:text-white transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-slate-800/60 backdrop-blur-md border border-slate-700/50 shadow-xl;
+  }
+  
+  .glass-card {
+    @apply bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 hover:bg-slate-800/60 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white font-medium rounded-lg shadow-lg hover:shadow-blue-500/25 transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg border border-slate-700 transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .input-field {
+    @apply w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2.5 text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-slate-500;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-violet-400;
+  }
+}

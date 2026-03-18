@@ -1,0 +1,33 @@
+# Node & Dependencies
+node_modules/
+dist/
+dist-ssr/
+
+# Hardhat blockchain artifacts (Do not commit these as they regenerate automatically)
+backend/artifacts/
+backend/cache/
+backend/typechain-types/
+backend/coverage/
+backend/coverage.json
+coverage.json
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.DS_Store
+*.sw?
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Vite
+*.tsbuildinfo
