@@ -1,4 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -6,6 +7,10 @@ module.exports = {
   networks: {
     hardhat: {
       chainId: 31337
+    },
+    sepolia: {
+      url: process.env.ALCHEMY_RPC_URL || "",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : []
     }
   }
 };
